@@ -52,3 +52,25 @@
   --link: 500 0.875rem 'Raleway', sans-serif;
   --tag: 700 0.625rem 'Raleway', sans-serif;
 }
+
+html {
+  background-color: var(--shape-background);
+  color: var(--text-body);
+}
+
+h1 {
+  font: var(--title-lg);
+}
+
+h2 {
+  font: var(--title-sm);
+}
+
+button {
+  font: var(--button);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
