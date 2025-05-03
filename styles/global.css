@@ -79,3 +79,27 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+main {
+  & header {
+    position: absolute;
+    z-index: 1;
+  }
+
+  & section.hero {
+    position: relative;
+
+    background: url(../assets/hero-background.png) no-repeat bottom;
+    background-size: cover;
+    opacity: 0;
+    animation: appear 2s ease-in forwards;
+  }
+}
+
+@keyframes appear {
+  to {
+    background: url(../assets/hero-background.png) no-repeat bottom;
+    background-size: cover;
+    opacity: 1;
+  }
+}
