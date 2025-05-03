@@ -1,0 +1,30 @@
+section.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  text-align: center;
+  padding-block: 0 29.375rem;
+
+  & h1 {
+    margin-inline: 20rem;
+    opacity: 0;
+
+    animation: appear 3s ease-in forwards;
+  }
+
+  & p {
+    font: var(--body-lg-regular);
+    margin-inline: 25rem;
+    opacity: 0;
+
+    animation: appear 3s 0.5s ease-in forwards;
+  }
+}
+
+@keyframes appear {
+  to {
+    opacity: 1;
+  }
+}
