@@ -1,0 +1,30 @@
+header {
+  /* max-width: 80rem; */
+  width: 100%;
+  margin-inline: auto;
+
+  padding: 3.5rem 10rem 10.25rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & a {
+    background-color: var(--pink-dark);
+    color: var(--text-title);
+
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px;
+
+    background-image: linear-gradient(var(--pink-base), var(--pink-base));
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 0% 0%;
+
+    transition: background-size 0.5s ease;
+
+    &:hover {
+      background-size: 100% 100%;
+    }
+  }
+}

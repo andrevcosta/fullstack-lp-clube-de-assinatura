@@ -68,6 +68,11 @@ h2 {
 
 button {
   font: var(--button);
+  border: none;
+}
+
+.anchor-btn {
+  font: var(--button);
 }
 
 a {
