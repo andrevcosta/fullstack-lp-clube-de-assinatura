@@ -2,7 +2,6 @@ header {
   /* max-width: 80rem; */
   width: 100%;
   margin-inline: auto;
-
   padding: 3.5rem 10rem 10.25rem;
 
   display: flex;
@@ -16,15 +15,36 @@ header {
     padding: 0.75rem 1.25rem;
     border-radius: 8px;
 
-    background-image: linear-gradient(var(--pink-base), var(--pink-base));
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: 0% 0%;
+    position: relative;
 
-    transition: background-size 0.5s ease;
+    &::after {
+      content: 'Assinar';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: inherit;
+      background-color: transparent;
+    }
 
-    &:hover {
-      background-size: 100% 100%;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: inherit;
+      background-color: var(--pink-base);
+      border-radius: inherit;
+      transform: scaleX(0) scaleY(0.3);
+
+      transition: transform 300ms;
+    }
+
+    &:hover::before {
+      transform: scaleX(1) scaleY(1);
     }
   }
 }
