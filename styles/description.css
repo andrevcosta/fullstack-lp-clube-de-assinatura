@@ -12,54 +12,21 @@ section.description {
     text-align: center;
     margin-block: 0.5rem;
 
-    & .blue-highlight {
+    & .blue-highlight-animation {
       font-weight: 700;
     }
   }
 
-  /* OPACITY ANIMATION */
-  & .opacity-animation {
-    opacity: 0.5;
-  }
-  &:hover .opacity-animation {
-    animation: text-highlight 0.5s ease-in-out both;
-  }
-  &:hover .opacity-first-part {
-    animation-delay: 0s;
-  }
-  &:hover .opacity-second-part {
-    animation-delay: 0.5s;
-  }
-  &:hover .opacity-third-part {
-    animation-delay: 1s;
-  }
-
-  /* BLUE COLOR ANIMATION */
-  &:hover .blue-highlight {
-    animation: blue-highlight-effect 0.5s ease-in-out both;
-  }
-  &:hover .blue-first-part {
-    animation-delay: 0s;
-  }
-  &:hover .blue-second-part {
-    animation-delay: 0.5s;
-  }
-  &:hover .blue-third-part {
-    animation-delay: 1s;
-  }
-
   & img {
-    width: 5.5rem;
-    height: 5.5rem;
+    width: 5rem;
+    height: 5rem;
   }
-
   & .bottom-images {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-
   & img[src*='spellbook'] {
     transform: rotate(20deg);
   }
@@ -70,25 +37,63 @@ section.description {
     transform: rotate(-14deg);
   }
 
-  /* IMAGES SCALE */
+  /* TEXT OPACITY AND COLOR ANIMATIONS */
+  & .opacity-animation {
+    opacity: 0.5;
+  }
+  &:hover .opacity-animation {
+    animation: text-highlight 0.3s ease-in-out both;
+  }
+  &:hover .blue-highlight-animation {
+    animation: blue-highlight-effect 0.3s ease-in-out both;
+  }
 
-  & .image-scale {
+  /* IMAGES SCALE ANIMATIONS */
+  & .image-scale-animation {
     scale: 0;
   }
-  &:hover .image-scale {
-    animation: images-scale-up 0.5s ease-in-out both normal;
+  &:hover .image-scale-animation {
+    animation: images-scale-up 0.3s ease-in-out both normal;
   }
-  &:not(:hover) .image-scale {
-    animation: images-scale-down 0.5s ease-in-out both normal;
+  &:not(:hover) .image-scale-animation {
+    animation: images-scale-down 0.3s ease-in-out both normal;
   }
+
+  /* ANIMATIONS DELAYS */
+  &:hover .opacity-first-part,
+  &:hover .blue-first-part,
   &:hover .spellbook {
     animation-delay: 0s;
   }
+  &:hover .opacity-second-part,
+  &:hover .blue-second-part,
   &:hover .planchette {
     animation-delay: 0.5s;
   }
+  &:hover .opacity-third-part,
+  &:hover .blue-third-part,
   &:hover .crystal {
     animation-delay: 1s;
+  }
+
+  /* IMAGES ROTATION */
+  & .spellbook {
+    transition: transform 0.5s;
+  }
+  & .spellbook:hover {
+    transform: rotate(30deg) scale(1.1);
+  }
+  & .planchette {
+    transition: transform 0.5s;
+  }
+  & .planchette:hover {
+    transform: rotate(109deg) scale(1.1);
+  }
+  & .crystal {
+    transition: transform 0.5s;
+  }
+  & .crystal:hover {
+    transform: rotate(-4deg) scale(1.1);
   }
 }
 
