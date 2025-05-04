@@ -96,6 +96,14 @@ main {
   }
 }
 
+.header-text {
+  text-align: center;
+  h2 {
+    font: var(--title-sm);
+    color: var(--text-title);
+  }
+}
+
 @keyframes appear {
   to {
     background: url(../assets/hero-background.png) no-repeat bottom;

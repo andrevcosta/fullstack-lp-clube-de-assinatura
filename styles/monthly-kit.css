@@ -1,0 +1,32 @@
+section.monthly-kit {
+  margin-block: 17.375rem 15rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  & .header-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 0.5rem;
+  }
+
+  & p {
+    font: var(--body-md-regular);
+    color: var(--text-body);
+
+    margin-bottom: 5.5rem;
+  }
+
+  & .book {
+    & .main-book {
+      & img {
+        width: 29rem;
+        height: 38.5rem;
+      }
+    }
+  }
+}
