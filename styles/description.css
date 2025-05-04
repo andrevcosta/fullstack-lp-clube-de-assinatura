@@ -1,0 +1,83 @@
+section.description {
+  margin: 8rem 7.5rem 5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  & .description-text {
+    color: var(--text-body);
+    font: var(--subtitle);
+    text-align: center;
+    margin-block: 0.5rem;
+
+    & .blue-highlight {
+      font-weight: 700;
+    }
+  }
+
+  /* OPACITY ANIMATION */
+  .opacity-animation {
+    opacity: 0.5;
+  }
+  &:hover .opacity-animation {
+    animation: text-highlight 0.5s ease-in-out both;
+  }
+  &:hover .opacity-first-part {
+    animation-delay: 0s;
+  }
+  &:hover .opacity-second-part {
+    animation-delay: 0.5s;
+  }
+  &:hover .opacity-third-part {
+    animation-delay: 1s;
+  }
+
+  /* BLUE COLOR ANIMATION */
+  &:hover .blue-highlight {
+    animation: blue-highlight-effect 0.5s ease-in-out both;
+  }
+  &:hover .blue-first-part {
+    animation-delay: 0.5s;
+  }
+  &:hover .blue-second-part {
+    animation-delay: 1s;
+  }
+  &:hover .blue-third-part {
+    animation-delay: 1.5s;
+  }
+
+  & img {
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+
+  & .bottom-images {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  & img[src*='spellbook'] {
+    transform: rotate(20deg);
+  }
+  & img[src*='planchette'] {
+    transform: rotate(99deg);
+  }
+  & img[src*='crystal'] {
+    transform: rotate(-14deg);
+  }
+}
+
+@keyframes text-highlight {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes blue-highlight-effect {
+  to {
+    color: var(--blue-light);
+  }
+}
