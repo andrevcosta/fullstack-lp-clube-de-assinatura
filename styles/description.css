@@ -18,7 +18,7 @@ section.description {
   }
 
   /* OPACITY ANIMATION */
-  .opacity-animation {
+  & .opacity-animation {
     opacity: 0.5;
   }
   &:hover .opacity-animation {
@@ -39,13 +39,13 @@ section.description {
     animation: blue-highlight-effect 0.5s ease-in-out both;
   }
   &:hover .blue-first-part {
-    animation-delay: 0.5s;
+    animation-delay: 0s;
   }
   &:hover .blue-second-part {
-    animation-delay: 1s;
+    animation-delay: 0.5s;
   }
   &:hover .blue-third-part {
-    animation-delay: 1.5s;
+    animation-delay: 1s;
   }
 
   & img {
@@ -69,6 +69,27 @@ section.description {
   & img[src*='crystal'] {
     transform: rotate(-14deg);
   }
+
+  /* IMAGES SCALE */
+
+  & .image-scale {
+    scale: 0;
+  }
+  &:hover .image-scale {
+    animation: images-scale-up 0.5s ease-in-out both normal;
+  }
+  &:not(:hover) .image-scale {
+    animation: images-scale-down 0.5s ease-in-out both normal;
+  }
+  &:hover .spellbook {
+    animation-delay: 0s;
+  }
+  &:hover .planchette {
+    animation-delay: 0.5s;
+  }
+  &:hover .crystal {
+    animation-delay: 1s;
+  }
 }
 
 @keyframes text-highlight {
@@ -79,5 +100,22 @@ section.description {
 @keyframes blue-highlight-effect {
   to {
     color: var(--blue-light);
+  }
+}
+
+@keyframes images-scale-up {
+  0% {
+    scale: 0;
+  }
+  100% {
+    scale: 1;
+  }
+}
+@keyframes images-scale-down {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 0;
   }
 }
