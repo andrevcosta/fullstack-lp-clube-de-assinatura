@@ -98,10 +98,12 @@ main {
 
 .header-text {
   text-align: center;
-  h2 {
-    font: var(--title-sm);
-    color: var(--text-title);
-  }
+  font: var(--title-sm);
+  color: var(--text-title);
+}
+
+ul[role='list'] {
+  list-style: none;
 }
 
 @keyframes appear {
