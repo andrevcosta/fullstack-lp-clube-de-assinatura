@@ -10,6 +10,48 @@ section.subscription {
     align-items: center;
 
     & .semiannual {
+      & .card-container {
+        position: relative;
+      }
+
+      & .pricing-star-top-1 {
+        position: absolute;
+        top: -1.2rem;
+        left: -2rem;
+
+        width: 1.625rem;
+        height: 1.625rem;
+      }
+      & .pricing-star-top-2 {
+        position: absolute;
+        top: 1rem;
+        left: -2.5rem;
+
+        width: 0.8rem;
+        height: 0.8rem;
+      }
+      & .pricing-bunny {
+        position: absolute;
+        top: -3.2rem;
+        left: 2rem;
+      }
+      & .pricing-star-bottom-1 {
+        position: absolute;
+        bottom: -2rem;
+        right: 0.5rem;
+
+        width: 0.8rem;
+        height: 0.8rem;
+      }
+      & .pricing-star-bottom-2 {
+        position: absolute;
+        bottom: -2rem;
+        right: -2rem;
+
+        width: 1.625rem;
+        height: 1.625rem;
+      }
+
       & .pricing-card {
         display: flex;
         flex-direction: column;
