@@ -1,0 +1,133 @@
+@import url(monthly.css);
+@import url(semiannual.css);
+@import url(annual.css);
+
+section.subscription {
+  background: url(../assets/pricing-background.png) no-repeat center;
+  background-size: cover;
+
+  margin-block: 12.125rem 25.125rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9.125rem;
+
+  & .pricing-container {
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    & .top-stars {
+      position: relative;
+
+      & .pricing-star-top-1 {
+        position: absolute;
+        top: -14rem;
+        left: -2rem;
+
+        width: 1.625rem;
+        height: 1.625rem;
+      }
+      & .pricing-star-top-2 {
+        position: absolute;
+        top: -12rem;
+        left: -2.5rem;
+
+        width: 0.8rem;
+        height: 0.8rem;
+      }
+    }
+    & .bottom-stars {
+      position: relative;
+
+      & .pricing-star-bottom-1 {
+        position: absolute;
+        bottom: -14.5rem;
+        right: 0.5rem;
+
+        width: 0.8rem;
+        height: 0.8rem;
+      }
+      & .pricing-star-bottom-2 {
+        position: absolute;
+        bottom: -14.5rem;
+        right: -2rem;
+
+        width: 1.625rem;
+        height: 1.625rem;
+      }
+    }
+  }
+
+  &:hover .top-stars {
+    animation: top-stars-slide-out 0.8s ease forwards;
+  }
+  &:hover .bottom-stars {
+    animation: bottom-stars-slide-out 0.8s ease forwards;
+  }
+  &:not(:hover) .top-stars {
+    animation: top-stars-slide-in 0.8s ease forwards;
+  }
+  &:not(:hover) .bottom-stars {
+    animation: bottom-stars-slide-in 0.8s ease forwards;
+  }
+}
+
+@keyframes card-hover {
+  from {
+    background-color: var(--shape-base);
+  }
+  to {
+    background-color: var(--shape-hover);
+  }
+}
+
+@keyframes top-stars-slide-out {
+  from {
+    top: 0;
+    left: 0;
+    transform: rotate(0deg);
+  }
+  to {
+    top: 4rem;
+    left: -17rem;
+    transform: rotate(-8deg);
+  }
+}
+@keyframes bottom-stars-slide-out {
+  from {
+    bottom: 0;
+    right: 0;
+    transform: rotate(0deg);
+  }
+  to {
+    bottom: -4.5rem;
+    right: -18rem;
+    transform: rotate(8deg);
+  }
+}
+@keyframes top-stars-slide-in {
+  from {
+    top: 4rem;
+    left: -17rem;
+    transform: rotate(-8deg);
+  }
+  to {
+    top: 0;
+    left: 0;
+    transform: rotate(0deg);
+  }
+}
+@keyframes bottom-stars-slide-in {
+  from {
+    bottom: -4.5rem;
+    right: -18rem;
+    transform: rotate(8deg);
+  }
+  to {
+    bottom: 0;
+    right: 0;
+    transform: rotate(0deg);
+  }
+}
