@@ -2,7 +2,7 @@
 @import url(semiannual.css);
 @import url(annual.css);
 
-section.subscription {
+section#subscription {
   background: url(../../assets/pricing-background.png) no-repeat center;
   background-size: cover;
 

@@ -1,4 +1,4 @@
-section.subscription {
+section#subscription {
   & .monthly {
     position: absolute;
 
