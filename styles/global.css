@@ -69,6 +69,7 @@ h2 {
 button {
   font: var(--button);
   border: none;
+  cursor: pointer;
 }
 
 .anchor-btn {

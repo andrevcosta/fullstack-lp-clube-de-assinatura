@@ -9,14 +9,14 @@ section.subscription {
     display: flex;
     align-items: center;
 
-    & .semiannual {
-      & .card-container {
-        position: relative;
-      }
+    position: relative;
+
+    & .top-stars {
+      position: relative;
 
       & .pricing-star-top-1 {
         position: absolute;
-        top: -1.2rem;
+        top: -14rem;
         left: -2rem;
 
         width: 1.625rem;
@@ -24,20 +24,19 @@ section.subscription {
       }
       & .pricing-star-top-2 {
         position: absolute;
-        top: 1rem;
+        top: -12rem;
         left: -2.5rem;
 
         width: 0.8rem;
         height: 0.8rem;
       }
-      & .pricing-bunny {
-        position: absolute;
-        top: -3.2rem;
-        left: 2rem;
-      }
+    }
+    & .bottom-stars {
+      position: relative;
+
       & .pricing-star-bottom-1 {
         position: absolute;
-        bottom: -2rem;
+        bottom: -14.5rem;
         right: 0.5rem;
 
         width: 0.8rem;
@@ -45,21 +44,147 @@ section.subscription {
       }
       & .pricing-star-bottom-2 {
         position: absolute;
-        bottom: -2rem;
+        bottom: -14.5rem;
         right: -2rem;
 
         width: 1.625rem;
         height: 1.625rem;
       }
+    }
+
+    & .monthly {
+      position: absolute;
 
       & .pricing-card {
+        width: 18rem;
+        height: 26rem;
+
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 4.375rem;
+        justify-content: space-between;
         padding: 2rem 2rem 1.75rem;
 
-        background-color: var(--shape-hover);
+        background-color: var(--shape-base);
+        border-radius: 1.5rem;
+
+        & .pricing-card-header {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 1.5rem;
+
+          width: 100%;
+
+          & div:nth-child(1) {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            & p {
+              font: var(--title-xs);
+              color: var(--blue-light);
+            }
+
+            & .pricing-tag {
+              background-color: var(--shape-stroke);
+              padding: 0.563rem 1.25rem;
+              border-radius: 999px;
+              font: var(--tag);
+              color: var(--text-body);
+            }
+          }
+
+          & div:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            & p:nth-child(1) {
+              font: var(--title-md);
+              color: var(--text-title);
+
+              & span {
+                font-size: 1rem;
+              }
+            }
+
+            & p:nth-child(2) {
+              font: var(--body-sm-regular);
+              color: var(--text-label);
+            }
+          }
+        }
+
+        & .pricing-card-main {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 1.5rem;
+
+          & ul {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+          }
+
+          & li {
+            background-image: url(../assets/blue-star.svg);
+            background-repeat: no-repeat;
+            background-size: 0.75rem;
+            padding-left: 1.5rem;
+
+            font: var(--body-xs-regular);
+            color: var(--text-body);
+          }
+
+          & button {
+            width: 100%;
+            padding: 0.75rem 3.25rem;
+            background-color: var(--blue-dark);
+            color: var(--text-title);
+            font: var(-button);
+            border-radius: 0.5rem;
+
+            transition: background-color 0.5s;
+
+            &:hover {
+              background-color: var(--blue-base);
+            }
+          }
+        }
+
+        &:hover {
+          animation: card-hover 0.5s ease forwards;
+        }
+      }
+    }
+
+    & .semiannual {
+      z-index: 1;
+
+      & .card-container {
+        position: relative;
+      }
+      & .pricing-bunny {
+        position: absolute;
+        top: -3.2rem;
+        left: 2rem;
+      }
+
+      & .pricing-card {
+        width: 18rem;
+        height: 26rem;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem 2rem 1.75rem;
+
+        background-color: var(--shape-base);
         border-radius: 1.5rem;
 
         & .pricing-card-header {
@@ -112,6 +237,7 @@ section.subscription {
         }
 
         & .pricing-card-main {
+          width: 100%;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -134,19 +260,269 @@ section.subscription {
           }
 
           & button {
+            width: 100%;
             padding: 0.75rem 3.25rem;
             background-color: var(--pink-dark);
             color: var(--text-title);
             font: var(-button);
             border-radius: 0.5rem;
+
+            transition: background-color 0.5s;
+
+            &:hover {
+              background-color: var(--pink-base);
+            }
           }
+        }
+
+        &:hover {
+          animation: card-hover 0.5s ease forwards;
+        }
+      }
+    }
+
+    & .annual {
+      position: absolute;
+
+      & .pricing-card {
+        width: 18rem;
+        height: 26rem;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem 2rem 1.75rem;
+
+        background-color: var(--shape-base);
+        border-radius: 1.5rem;
+
+        & .pricing-card-header {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 1.5rem;
+
+          width: 100%;
+
+          & div:nth-child(1) {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            & p {
+              font: var(--title-xs);
+              color: var(--blue-light);
+            }
+
+            & .pricing-tag {
+              background-color: var(--shape-stroke);
+              padding: 0.563rem 1.25rem;
+              border-radius: 999px;
+              font: var(--tag);
+              color: var(--text-body);
+            }
+          }
+
+          & div:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            & p:nth-child(1) {
+              font: var(--title-md);
+              color: var(--text-title);
+
+              & span {
+                font-size: 1rem;
+              }
+            }
+
+            & p:nth-child(2) {
+              font: var(--body-sm-regular);
+              color: var(--text-label);
+            }
+          }
+        }
+
+        & .pricing-card-main {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 1.5rem;
+
+          & ul {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+          }
+
+          & li {
+            background-image: url(../assets/blue-star.svg);
+            background-repeat: no-repeat;
+            background-size: 0.75rem;
+            padding-left: 1.5rem;
+
+            font: var(--body-xs-regular);
+            color: var(--text-body);
+          }
+
+          & button {
+            width: 100%;
+            padding: 0.75rem 3.25rem;
+            background-color: var(--blue-dark);
+            color: var(--text-title);
+            font: var(-button);
+            border-radius: 0.5rem;
+
+            transition: background-color 0.5s;
+
+            &:hover {
+              background-color: var(--blue-base);
+            }
+          }
+        }
+
+        &:hover {
+          animation: card-hover 0.1s ease forwards;
         }
       }
     }
   }
 
-  & .monthly,
-  & .annual {
-    display: none;
+  &:hover .monthly {
+    animation: card-monthly-slide-out 0.8s ease forwards;
+  }
+  &:hover .annual {
+    animation: card-annual-slide-out 0.8s ease forwards;
+  }
+  &:not(:hover) .monthly {
+    animation: card-monthly-slide-in 0.8s ease forwards;
+  }
+  &:not(:hover) .annual {
+    animation: card-annual-slide-in 0.8s ease forwards;
+  }
+
+  &:hover .top-stars {
+    animation: top-stars-slide-out 0.8s ease forwards;
+  }
+  &:hover .bottom-stars {
+    animation: bottom-stars-slide-out 0.8s ease forwards;
+  }
+  &:not(:hover) .top-stars {
+    animation: top-stars-slide-in 0.8s ease forwards;
+  }
+  &:not(:hover) .bottom-stars {
+    animation: bottom-stars-slide-in 0.8s ease forwards;
+  }
+}
+
+@keyframes card-hover {
+  from {
+    background-color: var(--shape-base);
+  }
+  to {
+    background-color: var(--shape-hover);
+  }
+}
+
+@keyframes card-monthly-slide-out {
+  from {
+    top: 0;
+    left: 0;
+    transform: rotate(0);
+  }
+  to {
+    top: 3.5rem;
+    left: -18rem;
+    transform: rotate(-8deg);
+  }
+}
+@keyframes card-annual-slide-out {
+  from {
+    top: 0;
+    left: 0;
+    transform: rotate(0);
+  }
+  to {
+    top: 3.5rem;
+    right: -18rem;
+    transform: rotate(8deg);
+  }
+}
+
+@keyframes card-monthly-slide-in {
+  from {
+    top: 3.5rem;
+    left: -18rem;
+    transform: rotate(-8deg);
+  }
+  to {
+    top: 0;
+    left: 0;
+    transform: rotate(0);
+  }
+}
+@keyframes card-annual-slide-in {
+  from {
+    top: 3.5rem;
+    right: -18rem;
+    transform: rotate(8deg);
+  }
+  to {
+    top: 0;
+    left: 0;
+    transform: rotate(0);
+  }
+}
+
+@keyframes top-stars-slide-out {
+  from {
+    top: 0;
+    left: 0;
+    transform: rotate(0deg);
+  }
+  to {
+    top: 4rem;
+    left: -17rem;
+    transform: rotate(-8deg);
+  }
+}
+@keyframes bottom-stars-slide-out {
+  from {
+    bottom: 0;
+    right: 0;
+    transform: rotate(0deg);
+  }
+  to {
+    bottom: -4.5rem;
+    right: -18rem;
+    transform: rotate(8deg);
+  }
+}
+@keyframes top-stars-slide-in {
+  from {
+    top: 4rem;
+    left: -17rem;
+    transform: rotate(-8deg);
+  }
+  to {
+    top: 0;
+    left: 0;
+    transform: rotate(0deg);
+  }
+}
+@keyframes bottom-stars-slide-in {
+  from {
+    bottom: -4.5rem;
+    right: -18rem;
+    transform: rotate(8deg);
+  }
+  to {
+    bottom: 0;
+    right: 0;
+    transform: rotate(0deg);
   }
 }
