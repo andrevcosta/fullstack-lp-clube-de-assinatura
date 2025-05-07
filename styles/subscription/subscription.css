@@ -3,7 +3,7 @@
 @import url(annual.css);
 
 section.subscription {
-  background: url(../assets/pricing-background.png) no-repeat center;
+  background: url(../../assets/pricing-background.png) no-repeat center;
   background-size: cover;
 
   margin-block: 12.125rem 25.125rem;
